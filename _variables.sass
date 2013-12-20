@@ -1,0 +1,55 @@
+@import mixins
+
+
+// Colors
+$greyFont: #666666
+$greyFont_light: #939292
+$greyFont_dark: #2a2929
+$grey_light: #e6e6e6
+$grey_dark: #251f20
+$red: #d1222b
+$boxBorder: #dadada
+$grey_icon: #8d8d8c
+$loginGry: #867175
+
+//Vars
+$basenum: 16
+$full: 1498px
+$large: 1200px
+$medium: 900px
+$small: 500px
+$paddP: 2%
+$padd: $paddP
+$circle: em(24)
+
+//Fonts
++font-face("omnes", font-files("omnes-regular-webfont.woff","omnes-regular-webfont.ttf","omnes-regular-webfont.svg"),"omnes-regular-webfont.eot")
++font-face("omnes", font-files("omnes-bold-webfont.woff", "omnes-bold-webfont.ttf","omnes-bold-webfont.svg"),"omnes-bold-webfont.eot", bold, bold)
++font-face("omnes", font-files("omnes-light-webfont.woff", "omnes-light-webfont.ttf","omnes-light-webfont.svg"),"omnes-light-webfont.eot", 300, light)
++font-face("omnes", font-files("omnes-extralight.woff","omnes-extralight.ttf","omnes-extralight.svg"), "omnes-extralight.eot", 100)
++font-face("omnes", font-files("omnes-medium.woff","omnes-medium.ttf","omnes-medium.svg"), "omnes-medium.eot",600)
++font-face("omnes", font-files("omnes-black.woff","omnes-black.ttf","omnes-black.svg"), "omnes-black.eot",800)
+// @media screen and (-webkit-min-device-pixel-ratio:0)
+// 	+font-face("omnes", font-files("omnes-extralight-webfont.svg"))
+
+// +font-face("omnesBold", font-files("omnes-bold-webfont.woff","omnes-bold-webfont.ttf","omnes-bold-webfont.svg"), "omnes-bold-webfont.eot")
+// +font-face("omnesLight", font-files("omnes-light-webfont.woff","omnes-light-webfont.ttf","omnes-light-webfont.svg"), "omnes-light-webfont.eot")
+// +font-face("omnesExtraLight", font-files("omnes-extralight.woff","omnes-extralight.ttf","omnes-extralight.svg"), "omnes-extralight.eot")
+// +font-face("omnesMedium", font-files("omnes-medium.woff","omnes-medium.ttf","omnes-medium.svg"), "omnes-medium.eot")
+// +font-face("omnesBlack", font-files("omnes-black.woff","omnes-black.ttf","omnes-black.svg"), "omnes-black.eot")
++font-face("fontawesome", font-files("fontawesome-webfont.woff","fontawesome-webfont.ttf","fontawesome-webfont.svg"), "fontawesome-webfont.eot")
+
+$fontawesome: 'fontawesome'
+$backupFont: 'Gotham Book', Helvetica,  Arial, sans-serif
+$omnes: 'omnes', $backupFont
+// $omnesB: 'omnesBold', $backupFont
+// $omnesBL: 'omnesBlack', $backupFont
+// $omnesL: 'omnesLight', $backupFont
+// $omnesXL: 'omnesExtraLight', $backupFont
+// $omnesM: 'omnesMedium', $backupFont
+$arial: Arial, Helvetica, sans-serif
+
+$icons-spacing: 24px
+@import "icons/*.png"
++all-icons-sprites
+
