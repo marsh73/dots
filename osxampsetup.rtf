@@ -1,0 +1,102 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fnil\fcharset0 SourceSansPro-Regular;\f1\fnil\fcharset0 Monaco;\f2\fswiss\fcharset0 ArialMT;
+}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl480\slmult1
+
+\f0\fs24 \cf0 OSX 10.9 Mavericks local php server setup\
+to start it\
+
+\f1 sudo apachectl start\
+
+\f0 to stop it\
+
+\f1 sudo apachectl stop\
+
+\f0 to restart it\
+
+\f1 sudo apachectl restart\
+
+\f0 To find the Apache version\
+
+\f1 httpd -v\
+\
+\
+
+\f0 After starting Apache \'96 test to see if the webserver is working in the browser \'96 http://localhost \'96 you should see the \'93It Works!\'94 text.\
+\
+
+\f2 Check that you have a \'93username.conf\'94 filed under:
+\f0 \
+
+\f1 /etc/apache2/users/\
+
+\f0 If you don\'92t (very likely), then create one named by the short username of the account with the suffix\'a0
+\b .conf
+\b0 , it\'92s location and permissions/ownership is best tackled by using the Terminal, the text editor \'91nano\'92 would be the best tool to deal with this.\
+
+\f1 cd /etc/apache2/users\
+sudo nano username.conf\
+
+\f0 Then add the content below swapping in your \'91
+\b username\'92\'a0
+\b0 in the code below:\
+
+\f1 <Directory "/Users/username/Sites/">\
+Options Indexes MultiViews\
+AllowOverride All\
+Order allow,deny\
+Allow from all\
+</Directory>\
+
+\f0 Permissions on the file should be:\
+
+\f1 -rw-r--r-- \'a0 1 root \'a0wheel \'a0298 Jun 28 16:47 username.conf\
+
+\f0 If not you need to change\'85\
+
+\f1 sudo chmod 644 username.conf\
+
+\f0 Restart Apache for the new file to be read:\
+
+\f1 sudo apachectl restart\
+\
+Override .htaccess\
+\
+/etc/apache2/httpd.conf\
+\
+AllowOverride all\
+\
+PHP\
+\
+edit /etc/apache2/httpd.conf\
+
+\f0 Use \'93control\'94 + \'93w\'94 to search within 
+\b nano
+\b0  and search for \'91php\'92 this will land you on the right line then uncomment the line (remove the #):\
+
+\f1 LoadModule php5_module libexec/apache2/libphp5.so\
+\
+
+\f0 Reload apache to kick in\
+
+\f1 sudo apachectl restart\
+\
+test a php file\
+\
+MYSQL\
+\
+download and install mysql and some mysql client\
+\
+in ~/.bash_profile\
+export PATH="/usr/local/mysql/bin:$PATH"\
+\
+/usr/local/mysql/bin/mysqladmin -u root password 'yourpasswordhere'\
+\
+fix socket error\
+\
+sudo mkdir /var/mysql\
+sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock\
+}
