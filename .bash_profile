@@ -55,6 +55,11 @@ PS1="\n\[\033[1;3m\]\h\[\033[m\][\[\033[1;32m\]\u\[\033[m\]]💔 \n\033[1;35m\]\
 alias snphp='scp -r ~/Sites/servicenow/fe_templates/build jmarshall@devphp21:~'
 #functions
 
+
+function mkgo(){
+	mkdir $1 && cd $1
+}
+
 #start cq server locally
 function cqrun {
 	cd ~/Sites/CQ/aem_561
@@ -87,9 +92,6 @@ function snbuild {
 	rsync -a --exclude '*client*' --exclude '*hero*' build/img ../wcm/servicenow-view/src/jcr_root/etc/designs/servicenow/static
 }
 
-function bs {
-	cd ~/Sites/Devel
-	java -jar BrowserStackTunnel.jar xRk3x1PJAyJDVkQYgBzi  localhost,$1,0
-}
+
 
 
