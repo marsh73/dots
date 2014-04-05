@@ -4,8 +4,6 @@ alias vol='cd /Volumes'
 alias nuke='rm -rf'
 alias mm='middleman'
 alias mmgo='bundle exec middleman'
-alias sn='cd ~/Sites/servicenow'
-alias bsm='java -jar ~/Sites/Devel/BrowserStackTunnel.jar xRk3x1PJAyJDVkQYgBzi localhost,4567,0	'
 
 #git
 alias gc='git commit -am'
@@ -52,25 +50,14 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 
 PS1="\n\[\033[1;3m\]\h\[\033[m\][\[\033[1;32m\]\u\[\033[m\]]💔 \n\033[1;35m\]\$PWD\[\033[m\]: " 
 
-alias snphp='scp -r ~/Sites/servicenow/fe_templates/build jmarshall@devphp21:~'
-#functions
+
 
 
 function mkgo(){
 	mkdir $1 && cd $1
 }
 
-#start cq server locally
-function cqrun {
-	cd ~/Sites/CQ/aem_561
-	java -jar cq-quickstart-5.6.1.jar
-}
 
-#build cq project
-function cqbuild {
-	cd ~/Sites/$1/wcm
-	mvn -s settings.xml clean package
-}
 
 #run middleman server 
 
