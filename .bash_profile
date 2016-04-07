@@ -50,6 +50,7 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 
 PS1="\n\[\033[1;3m\]\h\[\033[m\][\[\033[1;32m\]\u\[\033[m\]]💔 \n\033[1;35m\]\$PWD\[\033[m\]: " 
 
+#PS1="\n\[\033[1;3m\]\h\[\033[m\][\[\033[1;32m\]\u\[\033[m\]]💔 \n\[\033[1;35m\]\$PWD\[\033[m\]: "
 
 
 
