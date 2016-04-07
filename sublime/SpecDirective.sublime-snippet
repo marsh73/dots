@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+'use strict';
+
+describe('Directive: ${1:this}', function() {
+  var scope,
+    $compile;
+
+  beforeEach(angular.mock.module('${2:sunmax:design}'));
+
+  beforeEach(inject(function($injector) {
+    $compile = $injector.get('$compile');
+    scope    = $injector.get('$rootScope').$new();
+  }));
+
+  describe('Structure', function() {
+    var element = null,
+      template  = '<div ${3:directive}></div>';
+
+    beforeEach(function() {
+      element = $compile(template)(scope);
+      scope.$apply();
+    });
+
+    it('does something', function () {
+      expect(element).toBeDefined();
+    });
+  });
+});
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ngSpec:directive</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

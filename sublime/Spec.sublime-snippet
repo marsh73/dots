@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+'use strict';
+
+describe('${1:Controller}:${2:myController}', function () {
+  var ${2:myController};
+
+  beforeEach(angular.mock.module('${3:sunmax.design}'));
+
+  // Initialize the controller and a mock scope
+  beforeEach(inject(function(\$injector) {
+    ${2:myController} = \$injector.get('${2:myController}');
+  }));
+
+  it('should be true', function() {
+    expect(true).toBe(true);
+  });
+
+
+});
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ngSpec</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.javascript</scope> -->
+</snippet>
